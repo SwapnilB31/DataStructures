@@ -5,6 +5,7 @@
  */
 
 import java.util.*;
+import java.io.*;
 
 public class PolishNotation {
 
@@ -21,15 +22,24 @@ public class PolishNotation {
         put("^",2);
     }};
     
-    ArrayList a = new ArrayList();
+
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        System.out.println("Enter your expression");
-        String expr = in.nextLine();
-        LinkedList <String> Infix = new PolishNotation().toInfix(expr);
-        LinkedList <String> PostfixExpr = new PolishNotation().toPostfix(Infix);
-        System.out.println("result = "+new PolishNotation().evaluatePostfix(PostfixExpr));
+        PolishNotation polish = new PolishNotation();
+        polish.calculator();
     } 
+    
+    public void calculator () {
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Escape Character is ']'. Enter you input at the prompt");
+        String input;
+        try {
+            while(!(input = in.readLine()).equals("]")) {
+              LinkedList <String> Infix = new PolishNotation().toInfix(input);
+              LinkedList <String> PostfixExpr = new PolishNotation().toPostfix(Infix);
+              System.out.println(evaluatePostfix(PostfixExpr));
+            }
+        } catch(IOException ex) {ex.printStackTrace();}
+    }
     
     private LinkedList toInfix (String expr) {
         LinkedList <String> infixExpression = new LinkedList<>();
@@ -107,7 +117,7 @@ public class PolishNotation {
     }
     
     private boolean isNum (char ch) {
-        return ch >= '1' && ch <= '9';
+        return ch >= '0' && ch <= '9';
     }
     
     private boolean isNum (String num) {
