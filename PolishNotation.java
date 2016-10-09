@@ -34,8 +34,8 @@ public class PolishNotation {
         String input;
         try {
             while(!(input = in.readLine()).equals("]")) {
-              LinkedList <String> Infix = new PolishNotation().toInfix(input);
-              LinkedList <String> PostfixExpr = new PolishNotation().toPostfix(Infix);
+              LinkedList <String> Infix = toInfix(input);
+              LinkedList <String> PostfixExpr = toPostfix(Infix);
               System.out.println(evaluatePostfix(PostfixExpr));
             }
         } catch(IOException ex) {ex.printStackTrace();}
