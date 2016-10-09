@@ -30,7 +30,7 @@ public class PolishNotation {
     
     public void calculator () {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Escape Character is ']'. Enter you input at the prompt");
+        System.out.println("Escape Character is ']'. Enter your input at the prompt");
         String input;
         try {
             while(!(input = in.readLine()).equals("]")) {
