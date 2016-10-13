@@ -40,7 +40,7 @@ function isOperator(ele) {
 
 function getNumber(sliceExpr) {
   var i = 0;
-  while( i < sliceExpr.length && (isNumeral(sliceExpr[i]) && sliceExpr[i] === "."))
+  while( i < sliceExpr.length && (isNumeral(sliceExpr[i]) || sliceExpr[i] === "."))
     i++;
   return i;
 }
