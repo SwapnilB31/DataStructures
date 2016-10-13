@@ -28,7 +28,7 @@ function isNum(chunk) {
 }
 
 function isNumeral(ele) {
-  return (ele >= '0' && ele <= '9') || ele === ".";
+  return ele >= '0' && ele <= '9';
 }
 
 function isOperator(ele) {
@@ -40,7 +40,7 @@ function isOperator(ele) {
 
 function getNumber(sliceExpr) {
   var i = 0;
-  while( i < sliceExpr.length && isNumeral(sliceExpr[i]))
+  while( i < sliceExpr.length && (isNumeral(sliceExpr[i]) && sliceExpr[i] === "."))
     i++;
   return i;
 }
