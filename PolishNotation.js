@@ -3,7 +3,7 @@
 * @author SWAPNIL
 * 06-Oct-2016
 *
-* This program is written within the specifications of Nashorn Javascript. Nashorn is a Javascript Engine written in Javascript
+* This program is written within the specifications of Nashorn Javascript. Nashorn is a Javascript Engine written in Java
 * that ships with the JDK since Java 8.
 *
 * To run this program, invoke it with the jjs application that you'll find in your jdk/bin
