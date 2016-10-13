@@ -117,9 +117,6 @@ function toPostfix(infixExpr) {
       infixOperatorStack.pop();
       infixExpr.shift();
     }
-    /*console.log("infixOperatorStack = "+infixOperatorStack);
-    console.log("infixExpr = "+infixExpr);
-    console.log("postfixExpr = "+postfixExpr);*/
   }
   return postfixExpr;
 }
