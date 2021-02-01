@@ -1,6 +1,6 @@
 /*
 * 
-* @author SWAPNIL
+* @author github.com/SwapnilB31
 * 06-Oct-2016
 *
 * This program is written within the specifications of Nashorn Javascript. Nashorn is a Javascript Engine written in Java
